@@ -19,12 +19,12 @@ f18::
       MsgBox Dvorak Keboard Layout Active
    }
 return
-
+; Function that changes keys depending on input
 DvorakQwerty(Dvorak :=0, Qwerty:=0)
 {
    ; Is Capslock on?
    CapsState := GetKeyState("CapsLock", "T")
-
+   
    ;Dvorak of Qwerty?
    if(DvorakOn)
       {
