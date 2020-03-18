@@ -172,8 +172,8 @@ ClipWait, 2
 Clip3 := ClipBoard
 return
 
-$.:: Send, "Ye Boi"
+$.:: UnDo()
 return
 
-$/:: 
+$/:: ReDo()
 Return

@@ -10,75 +10,77 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;=====================================1-3=======================================
 ; Button 1 
-F1::RightVirtualDestop()
+1::RightVirtualDestop()
 return
 
 ; Button 2
-F2::ViewAllVirtualDesktops()
+2::ViewAllVirtualDesktops()
 return
 
 ; Button 3
-F3::LeftVirtualDestop()
+3::LeftVirtualDestop()
 return
 
 ;=====================================3-6=======================================
 ; Button 4
-F4::NextTrack()
+4::NextTrack()
 return
 
 ; Button 5
-F5::SpotifyPlayPause()
+5::SpotifyPlayPause()
 return
 
 ; Button 6
-F6::LastTrack()
+6::LastTrack()
 return
 
 ;======================================7-9======================================
 ; Button 7  
-F7::
+7::UnDo()
 return
 
 ; Button 8
-F8::PlayPause()
+8:: ;copy n paste bs
 return
 
 ; Button 9
-F9::
+9::ReDo()
 return
 
 ;=====================================10-12======================================
 ;Button 10
-F10::CloseTaskManager()
+0::Delete
 return
 
 ; Button 11
-F11::RunTaskManager()
+-::Enter
 return
 
 ; Button 12
-F12::
+=::BackSpace
 return
 
 ;=====================================X Buttons======================================
-#IfWinActive, ahk_exe chrome.exe
+; #IfWinActive, ahk_exe chrome.exe
 
-XButton1::
-    Send, {XButton1}
-return
+; XButton1::
+;     Send, {XButton1}
+; return
 
 
-XButton2::
-    Send, {XButton2}
-return
+; XButton2::
+;     Send, {XButton2}
+; return
 
-#If
+; #If
 
-XButton1::
-    UnDo()    
-return
+; XButton1::
+;     UnDo()    
+; return
 
-XButton2::
-    ReDo()
-return
+; XButton2::
+;     ReDo()
+; return
 
+
+   
