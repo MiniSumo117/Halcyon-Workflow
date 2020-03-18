@@ -3,171 +3,177 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+;_________________________________
+;| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+;---------------------------------
+;| a | b | c | d | e | f | g | h |
+;---------------------------------
+;| i | j | k | l | m | n | o | p |
+;---------------------------------
+;| q | r | s | t | u | v | w | x |
+;---------------------------------
+;| - | = | [ |   |   |   | ] | # | 
+;---------------------------------
+;| ; | ' | , |   |   |   | . | / | 
+;---------------------------------
 
 ;=============================== Row 1 ===================================
 
 ;1.1 : Dvorak/Qwerty Switch
-1::F18 
+$1::F18 
 return
 
-2::
-MsgBox, Test1
+$2::
 return
 
-+2::
-MsgBox, Test2
+$+2::
 return
 
-3::
+$3::
 return
 
-4::
+$4::
 return
 
-5::
+$5::
 return
 
-6::
+$6::
 return
 
-7::
+$7::
 return
 
-8::
+$8::
 return
 
 
 ;=============================== Row 2 ===================================
 
-a::
+$a::
 return
 
-b::
+$b::
 return
 
-c::
+$c::
 return
 
-d::
+$d::
 return
 
-e::
+$e::
 return
 
-f::
+$f::
 return
 
-g::
+$g::
 return
 
-h::
+$h::
 return
 
 ;=============================== Row 3 ===================================
 
-i::
+$i::
 return
 
-j::
+$j::
 return
 
-k::Fullscreen1()
+$k::Fullscreen1()
 return
 
-l::Fullscreen2()
+$l::Fullscreen2()
 return
 
-m::Fullscreen3()
+$m::Fullscreen3()
 return
 
-n::
+$n::
 return
 
-o::
+$o::
 return
 
-p::
+$p::
 return
 
 ;=============================== Row 4 ===================================
 
-q::Screen1Left()
+$q::Screen1Left()
 return
 
-r::Screen1Right()
+$r::Screen1Right()
 return
 
-s::Screen2Left()
+$s::Screen2Left()
 return
 
-t::Screen2Right()
+$t::Screen2Right()
 return
 
-u::Screen3Left()
+$u::Screen3Left()
 return
 
-v::Screen3Right()
+$v::Screen3Right()
 return
 
-w::
+$w::
 return
 
-x::
+$x::
 return
 
 ;=============================== Row 5 ===================================
 
-Numpad1::
+$-:: 
 return
 
-Numpad2::
+$=:: 
 return
 
-Numpad3::
+$[:: 
 return
 
 
-
-Numpad4::
+$]:: 
 return
 
-Numpad5::
+$#:: 
 return
 
 ;=============================== Row 6 ===================================
 
-Numpad6::
+$`;::
 Clipboard := "" 
 Send, ^c
 ClipWait, 2
 Clip1 := ClipBoard
 return
 
-+Numpad6::
-MsgBox, [ Options, Title, Text, Timeout]
+$+`;::
 ClipBoard := Clip1
 Send ^v
 return
 
-Numpad7::
-Clipboard := "" 
+$'::
+Clipboard := ""  
 Send, ^c
 ClipWait, 2
 Clip2 := ClipBoard
 return
 
-Numpad8::
+$,::
 Clipboard := "" 
 Send, ^c
 ClipWait, 2
 Clip3 := ClipBoard
 return
 
-
-
-Numpad9::
+$.:: Send, "Ye Boi"
 return
 
-NumpadMult::SaveAs()
-return
-
+$/:: 
+Return
