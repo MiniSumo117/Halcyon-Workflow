@@ -63,7 +63,8 @@ RunWord()   ;Tested
 ;Run Notepad
 RunNotepad()
 {
-    Run, %windir%\system32\notepad.exe
+    Run, Notepad.exe
+    ;Run, %windir%\system32\notepad.exe
 }
 
 ;Run Notepad
@@ -82,4 +83,29 @@ CloseTaskManager()
     if WinExist("Task Manager")
     WinClose ; use the window found aboveTask Manager
 
+}
+
+ToggleTaskManager()
+{
+    ;not working
+    if WinExist("Task Manager")
+    {
+        ;WinClose, Task Manager
+        ; WinActivate, Task Manager
+        ; WinWaitActive, Task Manager
+        ; Send, {Escape}
+        ; MsgBox, "Yes"
+        
+    }
+    Else
+    {
+        run taskmgr.exe
+    }
+
+}
+
+RunSnippet()
+{
+    Run, SnippingTool.exe
+    ;Run, %windir%\system32\SnippingTool.exe
 }

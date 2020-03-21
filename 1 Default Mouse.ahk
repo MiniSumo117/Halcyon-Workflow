@@ -10,55 +10,56 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;=====================================1-3=======================================
 ; Button 1 
-1::RightVirtualDestop()
+$1::RightVirtualDestop()
 return
 
 ; Button 2
-2::ViewAllVirtualDesktops()
+$2::ViewAllVirtualDesktops()
 return
 
 ; Button 3
-3::LeftVirtualDestop()
+$3::LeftVirtualDestop()
 return
 
 ;=====================================3-6=======================================
 ; Button 4
-4::NextTrack()
+$4::NextTrack()
 return
 
 ; Button 5
-5::SpotifyPlayPause()
+$5::SpotifyPlayPause()
 return
 
 ; Button 6
-6::LastTrack()
+$6::LastTrack()
 return
 
 ;======================================7-9======================================
 ; Button 7  
-7::UnDo()
+$7::ReDo()
 return
 
 ; Button 8
-8:: ;copy n paste bs
+$8:: ;copy n paste bs
 return
 
 ; Button 9
-9::ReDo()
+$9::UnDo()
 return
 
 ;=====================================10-12======================================
 ;Button 10
-0::Delete
+$0:: Send, {Delete}
 return
 
 ; Button 11
--::Enter
+$-:: Send, {Enter}
 return
 
 ; Button 12
-=::BackSpace
+$=:: Send, {BackSpace}
 return
+
 
 ;=====================================X Buttons======================================
 ; #IfWinActive, ahk_exe chrome.exe

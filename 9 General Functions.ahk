@@ -130,23 +130,94 @@ TypeEmail()
 
 ;================================== C & P Stuffs ========================================
 
-GetFromClipboard()
-{ 
-  ClipSaved := ClipboardAll ;Save the clipboard
-  Clipboard = ;Empty the clipboard
-  SendInput, ^c
-  ClipWait, 2
-  if ErrorLevel
-  {
-    MsgBox % "Failed attempt to copy text to clipboard."
+
+; Clipboard := "" 
+; Send, ^c
+; ClipWait, 2
+; Clip1 := ClipBoard
+
+; ClipBoard := Clip1
+; Send ^v
+
+Clip1 := ClipBoard
+Clip2 := ClipBoard
+Clip3 := ClipBoard
+Clip4 := ClipBoard
+Clip5 := ClipBoard
+Clip6 := ClipBoard
+
+ClipArray := Array(Clip1, Clip2, Clip3, Clip4, Clip5, Clip6)
+
+
+AdvancedCopy(index := 0)
+{
+
+    Clipboard := "" 
+    Send, ^c
+    ClipWait, 2
+    ; ClipArray[index] := ClipBoard
+    MsgBox, "Should have copied"
     return
-  }
-  NewClipboard := Trim(Clipboard)
-  StringReplace, NewClipboard, NewClipBoard, `r`n, `n, All
-  Clipboard := ClipSaved ;Restore the clipboard
-  ClipSaved = ;Free the memory in case the clipboard was very large.
-  return NewClipboard
+
 }
+
+AdvancedPaste(index := 0)
+{
+    ; ClipBoard := ClipArray[index]
+    Send ^v
+    MsgBox, "Should have pasted"
+    return
+}
+
+; AdvancedCopyPaste(index)
+; {
+
+;     if GetKeyState(Control,"P")
+;     {
+            
+;         MsgBox, "Should have cut"
+;         return
+;     }
+;     else if GetKeyState(Shift, "P")
+;     {
+;         ClipBoard := ClipArray[index]
+;         Send ^v
+;         MsgBox, "Should have pasted"
+;         return
+;     }
+;     else
+;     {
+;         Clipboard := "" 
+;         Send, ^c
+;         ClipWait, 2
+;         ClipArray[index] := ClipBoard
+;         MsgBox, "Should have copied"
+;         return
+;     }
+    
+
+; }
+
+
+
+
+; GetFromClipboard()
+; { 
+;   ClipSaved := ClipboardAll ;Save the clipboard
+;   Clipboard = ;Empty the clipboard
+;   SendInput, ^c
+;   ClipWait, 2
+;   if ErrorLevel
+;   {
+;     MsgBox % "Failed attempt to copy text to clipboard."
+;     return
+;   }
+;   NewClipboard := Trim(Clipboard)
+;   StringReplace, NewClipboard, NewClipBoard, `r`n, `n, All
+;   Clipboard := ClipSaved ;Restore the clipboard
+;   ClipSaved = ;Free the memory in case the clipboard was very large.
+;   return NewClipboard
+; }
 
 ;===================================== Shutdown ========================================
 

@@ -23,16 +23,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 $1::F18 
 return
 
-$2::
+$2::ToggleTaskManager()
 return
 
-$+2::
+$3::RunSnippet()
 return
 
-$3::
-return
-
-$4::
+$4::RunNotepad()
 return
 
 $5::
@@ -147,29 +144,17 @@ return
 ;=============================== Row 6 ===================================
 
 $`;::
-Clipboard := "" 
-Send, ^c
-ClipWait, 2
-Clip1 := ClipBoard
+return
+; $:::AdvancedCopyPaste(1)
+; return
+
+$'::AdvancedCopy(2)
+return
+$@::AdvancedPaste(2)
 return
 
-$+`;::
-ClipBoard := Clip1
-Send ^v
-return
-
-$'::
-Clipboard := ""  
-Send, ^c
-ClipWait, 2
-Clip2 := ClipBoard
-return
 
 $,::
-Clipboard := "" 
-Send, ^c
-ClipWait, 2
-Clip3 := ClipBoard
 return
 
 $.:: UnDo()
