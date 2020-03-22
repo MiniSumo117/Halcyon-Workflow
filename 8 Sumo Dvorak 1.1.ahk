@@ -37,7 +37,7 @@ $+=:: SendRaw, % DvorakQwerty("|","+")          return
 ;-------------First Alphabet Row----------------
 $q::  SendRaw, % DvorakQwerty("#","q")          return
 $w::  SendRaw, % DvorakQwerty(",","w")          return
-$e::  SendRaw, % DvorakQwerty(";","e")          return
+$e::  SendRaw, % DvorakQwerty("_","e")          return
 $r::  SendRaw, % DvorakQwerty("p","r")          return
 $t::  SendRaw, % DvorakQwerty("y","t")          return
 $y::  SendRaw, % DvorakQwerty("f","y")          return
@@ -45,12 +45,12 @@ $u::  SendRaw, % DvorakQwerty("g","u")          return
 $i::  SendRaw, % DvorakQwerty("c","i")          return
 $o::  SendRaw, % DvorakQwerty("r","o")          return
 $p::  SendRaw, % DvorakQwerty("l","p")          return
-$[::  SendRaw, % DvorakQwerty("_","[")          return
+$[::  SendRaw, % DvorakQwerty(";","[")          return
 $]::  SendRaw, % DvorakQwerty(":","]")          return
 
 $+q:: SendRaw, % DvorakQwerty("#","Q")          return
 $+w:: SendRaw, % DvorakQwerty(",","W")          return
-$+e:: SendRaw, % DvorakQwerty(";","E")          return
+$+e:: SendRaw, % DvorakQwerty("_","E")          return
 $+r:: SendRaw, % DvorakQwerty("P","R")          return
 $+t:: SendRaw, % DvorakQwerty("Y","T")          return
 $+y:: SendRaw, % DvorakQwerty("F","Y")          return
@@ -58,7 +58,7 @@ $+u:: SendRaw, % DvorakQwerty("G","U")          return
 $+i:: SendRaw, % DvorakQwerty("C","I")          return
 $+o:: SendRaw, % DvorakQwerty("R","O")          return
 $+p:: SendRaw, % DvorakQwerty("L","P")          return
-$+[:: SendRaw, % DvorakQwerty("_","{")          return
+$+[:: SendRaw, % DvorakQwerty(";","{")          return
 $+]:: SendRaw, % DvorakQwerty(":","}")          return
 
 ;-------------Second Alphabet Row----------------
